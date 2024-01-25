@@ -5,31 +5,21 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
-  middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  gradientColors: '#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1',
+  firstName: 'Marcos',
+  middleName: '',
+  lastName: 'Pimentel',
+  message:
+    ' Committed to harnessing the power of technology to create meaningful and transformative solutions. ',
   icons: [
     {
-      image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      image: 'fa-github',
+      url: 'https://github.com/dopimentel',
     },
+
     {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
-    {
-      image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      image: 'fa-linkedin',
+      url: 'https://www.linkedin.com/in/marcoscoutinho/',
     },
   ],
 };
@@ -50,12 +40,14 @@ const mainBody = {
 
 const about = {
   show: true,
-  heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  heading: 'About Me',
+  imageLink:
+    'https://raw.githubusercontent.com/dopimentel/dopimentel.github.io/main/img-portfolio.jpg',
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "Hello world, welcome! I'm Marcos, a financier in career transition in Information Technology. I have approximately 5 years of experience in the payments market (acquiring and banking) in Customer Experience. I like playing chess and running.",
+  resume:
+    'https://docs.google.com/document/d/1zgDeWt6J2qOZCXQ5k5p9y3pSOyVEDnkmidIe3j9YFMs/edit?usp=sharing',
 };
 
 // PROJECTS SECTION
@@ -66,7 +58,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "dopimentel", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
 };
@@ -98,36 +90,34 @@ const leadership = {
 // SKILLS SECTION
 const skills = {
   show: true,
-  heading: "Skills",
+  heading: 'Skills',
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: 'Python', value: 20 },
+    { name: 'SQL', value: 90 },
+    { name: 'Data Structures', value: 85 },
+    { name: 'Node.JS', value: 95 },
+    { name: 'JavaScript', value: 95 },
+    { name: 'React', value: 85 },
+    { name: 'HTML/CSS', value: 75 },
+    { name: 'Sequelize', value: 90 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: 'Collaboration', value: 90 },
+    { name: 'Adaptability', value: 85 },
+    { name: 'Problem Solving', value: 85 },
+    { name: 'Empathy', value: 95 },
+    { name: 'Creativity', value: 90 },
+    { name: 'Organization', value: 70 },
   ],
 };
 
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
-  heading: "Get In Touch",
+  heading: 'Get In Touch',
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I am actively seeking employment opportunities in the field of full-stack development as a junior professional! Should you be aware of any open positions, have inquiries, or simply wish to reach out and say hello, please don't hesitate to contact me via email at: ",
+  email: 'mpc_marcos@hotmail.com',
 };
 
 const experiences = {
