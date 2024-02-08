@@ -42,7 +42,7 @@ const about = {
   show: true,
   heading: 'About Me',
   imageLink:
-    'https://raw.githubusercontent.com/dopimentel/dopimentel.github.io/main/img-portfolio.jpg',
+    'https://avatars.githubusercontent.com/u/106275499?v=4',
   imageSize: 375,
   message:
     "Hello world, welcome! I'm Marcos, a financier in career transition in Information Technology. I have approximately 5 years of experience in the payments market (acquiring and banking) in Customer Experience. I like playing chess and running.",
