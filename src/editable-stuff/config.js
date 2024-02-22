@@ -45,7 +45,7 @@ const about = {
     'https://avatars.githubusercontent.com/u/106275499?v=4',
   imageSize: 375,
   message:
-    "Hello world, welcome! I'm Marcos, a financier in career transition in Information Technology. I have approximately 5 years of experience in the payments market (acquiring and banking) in Customer Experience. I like playing chess and running.",
+    "Hello world, welcome! I'm Marcos. I have approximately 5 years of experience in the payments market (acquiring and banking) in Customer Experience. I like playing chess and running.",
   resume:
     'https://docs.google.com/document/d/1zgDeWt6J2qOZCXQ5k5p9y3pSOyVEDnkmidIe3j9YFMs/edit?usp=sharing',
 };
@@ -93,7 +93,7 @@ const skills = {
   heading: 'Skills',
   hardSkills: [
     { name: 'Python', value: 20 },
-    { name: 'SQL', value: 90 },
+    { name: 'MySQL', value: 90 },
     { name: 'Data Structures', value: 85 },
     { name: 'Node.JS', value: 95 },
     { name: 'JavaScript', value: 95 },
@@ -116,7 +116,7 @@ const getInTouch = {
   show: true,
   heading: 'Get In Touch',
   message:
-    "I am actively seeking employment opportunities in the field of full-stack development as a junior professional! Should you be aware of any open positions, have inquiries, or simply wish to reach out and say hello, please don't hesitate to contact me via email at: ",
+    "I am seeking employment opportunities as junior developer professional! Should you be aware of any open positions, have inquiries, or simply wish to reach out and say hello, please don't hesitate to contact me via email at: ",
   email: 'mpc_marcos@hotmail.com',
 };
 
