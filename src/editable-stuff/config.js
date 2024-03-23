@@ -92,7 +92,7 @@ const skills = {
   show: true,
   heading: 'Skills',
   hardSkills: [
-    { name: 'Python', value: 20 },
+    { name: 'Python', value: 40 },
     { name: 'MySQL', value: 90 },
     { name: 'Data Structures', value: 85 },
     { name: 'Node.JS', value: 95 },
@@ -116,7 +116,7 @@ const getInTouch = {
   show: true,
   heading: 'Get In Touch',
   message:
-    "I am seeking employment opportunities as junior developer professional! Should you be aware of any open positions, have inquiries, or simply wish to reach out and say hello, please don't hesitate to contact me via email at: ",
+    "Please do not hesitate to contact me via email at: ",
   email: 'mpc_marcos@hotmail.com',
 };
 
