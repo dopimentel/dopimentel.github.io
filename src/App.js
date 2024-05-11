@@ -49,6 +49,7 @@ const Home = React.forwardRef((props, ref) => {
       }
       {repos.show && (
         <Project
+          forkedRepos={repos.showForkedRepos}
           heading={repos.heading}
           username={repos.gitHubUsername}
           length={repos.reposLength}

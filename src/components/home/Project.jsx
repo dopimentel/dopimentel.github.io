@@ -17,7 +17,7 @@ const API = "https://api.github.com";
 // const gitHubQuery = "/repos?sort=updated&direction=desc";
 // const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
 
-const Project = ({ heading, username, length, specfic }) => {
+const Project = ({ forkedRepos, heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
   const specficReposAPI = `${API}/repos/${username}`;
   const dummyProjectsArr = new Array(length + specfic.length).fill(
@@ -26,13 +26,22 @@ const Project = ({ heading, username, length, specfic }) => {
 
   const [projectsArray, setProjectsArray] = useState([]);
 
+  const removeForkedRepos = (repos) => {
+    return repos.filter((repo) => !repo.fork);
+  }
+
   const fetchRepos = useCallback(async () => {
     let repoList = [];
     try {
       // getting all repos
       const response = await axios.get(allReposAPI);
-      // slicing to the length
-      repoList = [...response.data.slice(0, length)];
+      
+      if (!forkedRepos) {
+        repoList = [...removeForkedRepos(response.data).slice(0, length)]; // removing forked repos and slicing to the length
+      } else {
+        repoList = [...response.data.slice(0, length)]; // slicing to the length
+      }
+    
       // adding specified repos
       try {
         for (let repoName of specfic) {
@@ -48,7 +57,7 @@ const Project = ({ heading, username, length, specfic }) => {
     } catch (error) {
       console.error(error.message);
     }
-  }, [allReposAPI, length, specfic, specficReposAPI]);
+  }, [forkedRepos, allReposAPI, length, specfic, specficReposAPI]);
 
   useEffect(() => {
     fetchRepos();

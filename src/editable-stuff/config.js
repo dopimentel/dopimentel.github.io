@@ -39,7 +39,7 @@ const mainBody = {
 //         resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
 
 const about = {
-  show: true,
+  show: false,
   heading: 'About Me',
   imageLink:
     'https://avatars.githubusercontent.com/u/106275499?v=4',
@@ -57,9 +57,10 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
+  showForkedRepos: false, // Set it to true to show forked repositories too
   heading: "Recent Projects",
   gitHubUsername: "dopimentel", //i.e."johnDoe12Gh"
-  reposLength: 4,
+  reposLength: 6, 
   specificRepos: [],
 };
 
