@@ -57,7 +57,6 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  showForkedRepos: false, // Set it to true to show forked repositories too
   heading: "Recent Projects",
   gitHubUsername: "dopimentel", //i.e."johnDoe12Gh"
   reposLength: 6, 

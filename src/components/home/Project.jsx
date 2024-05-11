@@ -25,10 +25,7 @@ const Project = ({ forkedRepos, heading, username, length, specfic }) => {
   );
 
   const [projectsArray, setProjectsArray] = useState([]);
-
-  const removeForkedRepos = (repos) => {
-    return repos.filter((repo) => !repo.fork);
-  }
+  const [showForkedRepos, setShowForkedRepos] = useState(false);
 
   const fetchRepos = useCallback(async () => {
     let repoList = [];
@@ -36,11 +33,9 @@ const Project = ({ forkedRepos, heading, username, length, specfic }) => {
       // getting all repos
       const response = await axios.get(allReposAPI);
       
-      if (!forkedRepos) {
-        repoList = [...removeForkedRepos(response.data).slice(0, length)]; // removing forked repos and slicing to the length
-      } else {
-        repoList = [...response.data.slice(0, length)]; // slicing to the length
-      }
+
+      repoList = [...response.data];
+
     
       // adding specified repos
       try {
@@ -57,19 +52,34 @@ const Project = ({ forkedRepos, heading, username, length, specfic }) => {
     } catch (error) {
       console.error(error.message);
     }
-  }, [forkedRepos, allReposAPI, length, specfic, specficReposAPI]);
+  }, [allReposAPI, specfic, specficReposAPI]);
 
   useEffect(() => {
     fetchRepos();
   }, [fetchRepos]);
 
+  const toggleShowForkedRepos = () => {
+    setShowForkedRepos(!showForkedRepos);
+    console.log("clicked");
+  }
+
   return (
     <Jumbotron fluid id="projects" className="bg-light m-0">
       <Container className="">
         <h2 className="display-4 pb-5 text-center">{heading}</h2>
+
+        {/* Show/Hide Forked Repos Button */}
+        <div className="d-flex justify-content-center mb-5">
+          <a href="#projects" role="button" className="btn btn-outline-secondary mx-2" onClick={(toggleShowForkedRepos)}>
+            {showForkedRepos ? "Hide Forked Repos" : "Show Forked Repos"}
+          </a>
+        </div>
         <Row>
           {projectsArray.length
-            ? projectsArray.map((project, index) => (
+            ? projectsArray
+            .filter((project) => showForkedRepos || !project.fork) // filter out forked repos
+            .slice(0, length) // show only the first 'length' projects (reposLength from confi.js file) 
+            .map((project, index) => (
               <ProjectCard
                 key={`project-card-${index}`}
                 id={`project-card-${index}`}
